@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    tools:context=".Activities.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Top Container-->
+            <LinearLayout
+                android:id="@+id/activity_register_top_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_register"
+                    android:gravity="center"
+                    android:textSize="40sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/casper_bold"
+                    />
+
+            </LinearLayout>
+
+            <!--Center Container-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="17dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/activity_register_top_container">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="250dp"
+                    app:cardBackgroundColor="@color/dark_blue">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        app:cardCornerRadius="250dp"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/activity_register_profile_picture"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/no_image"
+                            android:scaleType="centerCrop"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/activity_register_change_profile_picture_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    android:contextClickable="false"
+                    android:text="Edit Profile Picture"
+                    android:fontFamily="@font/casper_regular"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="@string/text_input_username"
+                    android:textColorHint="@color/light_gray"
+                    app:boxStrokeColor="@color/light_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_register_username_text_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="@string/text_input_name"
+                    android:textColorHint="@color/light_gray"
+                    app:boxStrokeColor="@color/light_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_register_name_text_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="@string/text_input_surname"
+                    android:textColorHint="@color/light_gray"
+                    app:boxStrokeColor="@color/light_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_register_surname_text_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/text_input_email"
+                    android:textColorHint="@color/light_gray"
+                    app:boxStrokeColor="@color/light_gray"
+                    app:endIconDrawable="@android:drawable/ic_dialog_email"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_register_email_text_input"
+                        android:inputType="textEmailAddress|textNoSuggestions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="@string/text_input_password"
+                    android:textColorHint="@color/light_gray"
+                    app:boxStrokeColor="@color/light_gray"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/light_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_register_password_text_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="@string/text_input_confirm_password"
+                    android:textColorHint="@color/light_gray"
+                    app:boxStrokeColor="@color/light_gray"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/light_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_register_confirm_password_text_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="@string/text_input_phone"
+                    android:textColorHint="@color/light_gray"
+                    app:boxStrokeColor="@color/light_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_register_phone_text_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPhonetic"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:hint="@string/text_input_birthday"
+                    android:textColorHint="@color/light_gray"
+                    app:boxStrokeColor="@color/light_gray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_register_birthday_text_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="textPhonetic"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_spinner"
+                    android:entries="@array/reasons"
+                    android:paddingStart="5dp"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:spinnerMode="dropdown"
+                    android:popupBackground="@color/light_purple"
+                    android:state_hovered="true"
+                    android:textAlignment="textStart"
+                    android:theme="@style/Spinner"
+                    android:visibility="visible" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/activity_register_sign_up_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/light_purple"
+                    android:fontFamily="@font/casper_regular"
+                    android:text="@string/text_sign_up"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    app:cornerRadius="20dp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

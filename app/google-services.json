@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "403461636733",
+    "project_id": "nightlifekosovo",
+    "storage_bucket": "nightlifekosovo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403461636733:android:9c263bb9c7cbac023f2714",
+        "android_client_info": {
+          "package_name": "com.example.nightlifekosovo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403461636733-i29f1p1lhj3sinv7vrp7gehij55rj7b6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWw-c-GAfyU4DrPvEXFbsuzFK4brFtT80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403461636733-i29f1p1lhj3sinv7vrp7gehij55rj7b6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
